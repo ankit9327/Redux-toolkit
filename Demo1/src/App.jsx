@@ -1,7 +1,7 @@
 import React  from 'react'
 import './App.css'
 import { useSelector,useDispatch } from 'react-redux'
-import { increment,decrement } from './features/counter/counterSlice'
+import { increment,decrement,reset } from './features/counter/counterSlice'
 
 function App() {
  
@@ -29,13 +29,24 @@ function App() {
           
         </button>
 
-        {/* <span>c {count}</span> */}
+        
         <button 
           onClick={()=>dispatch(decrement())}
           style={{ margin: '5px', padding: '10px', fontSize: '16px' }}
         >
           Decrement
         </button>
+
+        
+
+        <button 
+          onClick={()=>dispatch(reset())}
+          style={{ margin: '5px', padding: '10px', fontSize: '16px' }}
+        >
+         Reset
+        </button>
+
+
       </div>
     </div>
 
